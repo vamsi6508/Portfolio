@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@media  screen and (max-width: auto){
+  
 
 body {
   margin: 0;
@@ -6,6 +8,8 @@ body {
   font-size: 16px;
   line-height: 1.8em;
 }
+}
+
 .d1{
   
   display: flex;
@@ -52,8 +56,9 @@ header {
   text-align: center;
   background-image: url('./img/bg.jpg');
   background-size: cover;
-  background-position: fixed;
-  color: white;
+  background-position: center;
+  background-attachment: fixed;
+  color: whitesmoke;
 }
 
 header section {
@@ -61,24 +66,22 @@ header section {
   max-width: 640px;
 }
 
-header img {
-  border-radius: 50%;
-  max-width: 150px;
-}
+
 
 h1 {
   text-transform: uppercase;
   margin: 1em 0;
+
 }
 
 h3 {
-  color: burlywood;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 h4 {
-  color: #333;
+  color: grey;
   font-weight: bold;
 }
 
@@ -183,32 +186,6 @@ ul.job-description li:before{
 
   
   
-}
-body{
-  font-family: Raleway, Arial, sans-serif;
-    font-size:16px;
-    font-weight:300;
-    color:#6d6d6d;
-  overflow-x:hidden;
-}
-
-a{
-  color:#f9398c;
-  text-decoration:none
-}
-
-a:hover,a:focus{
-  color:#f9398c;
-  text-decoration:underline
-}
-
-a:focus,
-.btn:focus {
-  outline: none;
-}
-
-.img-responsive {
-    border: 1px solid #ddd;
 }
 footer {
   background-color: #f1f1f1;
@@ -328,4 +305,62 @@ p {
   background: var(--color);
   color: #fff;
 }
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
 
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+@keyframes slide {
+  from{transform: translateX(0);}
+  to{transform: translateX(-100%);}
+}
+.logos-scrolling {overflow:hidden;white-space: nowrap;}
+.logos-scrolling-slide {display:inline-block;animation: 40s slide infinite linear;}
+.logos-scrolling-slide img {height:80px;}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
